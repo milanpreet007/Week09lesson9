@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2046
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnumDemo", "EnumDemo\EnumDemo.csproj", "{B58671D2-B65C-4AF9-AF1E-399D11541BF0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimeDemo", "TimeDemo\TimeDemo.csproj", "{3A78C8EB-E131-4664-AE7C-7A52AEB9BED7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B58671D2-B65C-4AF9-AF1E-399D11541BF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B58671D2-B65C-4AF9-AF1E-399D11541BF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B58671D2-B65C-4AF9-AF1E-399D11541BF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B58671D2-B65C-4AF9-AF1E-399D11541BF0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A78C8EB-E131-4664-AE7C-7A52AEB9BED7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A78C8EB-E131-4664-AE7C-7A52AEB9BED7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A78C8EB-E131-4664-AE7C-7A52AEB9BED7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A78C8EB-E131-4664-AE7C-7A52AEB9BED7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A1A9BB3F-2E81-4713-97CD-9C70CDFE8C60}
+	EndGlobalSection
+EndGlobal
