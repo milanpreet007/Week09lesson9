@@ -38,6 +38,7 @@
             this.Weightlabel = new System.Windows.Forms.Label();
             this.WeighttextBox = new System.Windows.Forms.TextBox();
             this.clearFormbutton = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.BMItableLayoutPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,6 +56,7 @@
             this.BMItableLayoutPanel.Controls.Add(this.Weightlabel, 0, 3);
             this.BMItableLayoutPanel.Controls.Add(this.WeighttextBox, 1, 3);
             this.BMItableLayoutPanel.Controls.Add(this.clearFormbutton, 0, 5);
+            this.BMItableLayoutPanel.Controls.Add(this.textBox1, 0, 0);
             this.BMItableLayoutPanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.BMItableLayoutPanel.Location = new System.Drawing.Point(12, 1);
             this.BMItableLayoutPanel.Name = "BMItableLayoutPanel";
@@ -65,6 +67,7 @@
             this.BMItableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 17.3913F));
             this.BMItableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 17.3913F));
             this.BMItableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 63F));
+            this.BMItableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.BMItableLayoutPanel.Size = new System.Drawing.Size(320, 490);
             this.BMItableLayoutPanel.TabIndex = 0;
             this.BMItableLayoutPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.BMItableLayoutPanel_Paint);
@@ -154,6 +157,15 @@
             this.clearFormbutton.UseVisualStyleBackColor = true;
             this.clearFormbutton.Click += new System.EventHandler(this.ClearFormbutton_Click);
             // 
+            // textBox1
+            // 
+            this.BMItableLayoutPanel.SetColumnSpan(this.textBox1, 2);
+            this.textBox1.Location = new System.Drawing.Point(3, 3);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(292, 29);
+            this.textBox1.TabIndex = 9;
+            this.textBox1.Text = "BMI Calculator";
+            // 
             // BMIcalculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
@@ -185,6 +197,7 @@
         private System.Windows.Forms.Label Weightlabel;
         private System.Windows.Forms.TextBox WeighttextBox;
         private System.Windows.Forms.Button clearFormbutton;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 
