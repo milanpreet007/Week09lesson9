@@ -217,11 +217,43 @@ namespace COMP123_S2019_Lesson9A
             {
                 bmiresult = weight * 703 / Math.Pow(HEIGHT, 2);
                 BMIresulttextBox.Text = bmiresult.ToString();
+                if (bmiresult < 18.5)
+                {
+                    BMIscaletextBox.Text = "Underweight";
+                }
+                else if (bmiresult > 18.5 && bmiresult < 24.9)
+                {
+                    BMIscaletextBox.Text = "Normal";
+                }
+                else if (bmiresult > 24.9 && bmiresult < 29)
+                {
+                    BMIscaletextBox.Text = "overweight";
+                }
+                else if (bmiresult > 30 )
+                {
+                    BMIscaletextBox.Text = "obese";
+                }
             }
             else
             {
                 bmiresult = weight / Math.Pow(HEIGHT, 2);
                 BMIresulttextBox.Text = bmiresult.ToString();
+                if (bmiresult < 18.5)
+                {
+                    BMIscaletextBox.Text = "Underweight";
+                }
+                else if (bmiresult > 18.5 && bmiresult < 24.9)
+                {
+                    BMIscaletextBox.Text = "Normal";
+                }
+                else if (bmiresult > 24.9 && bmiresult < 29)
+                {
+                    BMIscaletextBox.Text = "overweight";
+                }
+                else if (bmiresult > 30)
+                {
+                    BMIscaletextBox.Text = "obese";
+                }
             }
         }
 
