@@ -1,10 +1,10 @@
 ﻿/*
  * Name- Milanpreet Singh
  * Student Number-301044674
- * date last modified-25-7-2019
+ * date last modified-26-7-2019
  * this is a BMI calculator it uses the height,weight of the individual to calculate the BMI both in imperical and
  * metric units.
- * 
+ * The writer used professor Tom Tsiliopoulos code in making the assignment
 */
 using System;
 using System.Collections.Generic;
