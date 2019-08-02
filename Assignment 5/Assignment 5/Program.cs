@@ -29,6 +29,7 @@ namespace Assignment_5
             orderForm = new OrderForm();
 
             Application.Run(splashScreenForm);
+
         }
     }
 }
