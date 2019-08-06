@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -26,6 +27,20 @@ namespace Assignment_5
         private void Cancelbutton_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void SelectForm_Load(object sender, EventArgs e)
+        {
+            using (var db = new DollarComputersContext())
+            {
+                db.products.Load();
+                productsBindingSource.DataSource = db.products.Local.ToBindingList(); 
+            }
+        }
+
+        private void HardwareListdataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
