@@ -81,5 +81,20 @@ namespace COMP123_S2019_FinalTestC.Views
             int index = rand.Next(SkillsList.Length);
             FirstSkilllabel.Text = SkillsList.[index];
         }
+
+        private void MainTabControl_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FirstNameDataLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FirstNameLabel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
