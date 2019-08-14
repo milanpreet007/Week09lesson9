@@ -52,7 +52,21 @@ namespace COMP123_S2019_FinalTestC.Views
         }
 
         private void GenerateNameButton_Click(object sender, EventArgs e)
-        {  
+        {
+            // Inputing Last Name
+                var lastName = File.ReadAllLines("lastNames.txt");
+            var lastNameList = new List<string>(lastName);
+            Random random = new Random();
+            int indexs = random.Next(lastNameList.Count);
+            LastNameDataLabel.Text = lastNameList[indexs];
+
+
+            //Inputing First Name
+            var firstName = File.ReadAllLines("firstNames.txt");
+            var firstNameList = new List<string>(firstName);
+            Random rand = new Random();
+            int index = rand.Next(firstNameList.Count);
+            FirstNameDataLabel.Text = firstNameList[index];
             Program.characterportfolio.Identity.FirstName = FirstNameDataLabel.Text;
             Program.characterportfolio.Identity.LastName = LastNameDataLabel.Text;
         }
@@ -70,25 +84,7 @@ namespace COMP123_S2019_FinalTestC.Views
             int index = rand.Next(SkillsList.Length);
             FirstSkilllabel.Text = SkillsList.[index];
         }
-        public static void LoadNames()
-        {
-            //Entering the First Name
-            
-            AllLines = File.ReadAllLines("firstNames.txt");
-            //Entering the Last Name
-            
-            AllLine = File.ReadAllLines("lastNames.txt");
-
-        }
-        public static void GenerateNames()
-        {
-            Random rand = new Random();
-            int index = rand.Next(AllLines.Length);
-            FirstNameDataLabel.Text = AllLines[index];
-            Random rands = new Random();
-            int indexs = rand.Next(AllLine.Length);
-            LastNameDataLabel.Text = AllLine[indexs];
-        }
+        
         
             public int RandomNuber(int min,int max)
             {
