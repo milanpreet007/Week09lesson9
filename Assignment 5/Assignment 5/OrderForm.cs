@@ -28,7 +28,7 @@ namespace Assignment_5
             this.Hide();
         }
 
-        private void Cancelbutton_Click(object sender, EventArgs e)
+        private void ExitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
