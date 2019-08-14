@@ -11,6 +11,7 @@ namespace COMP123_S2019_FinalTestC.Objects
        
         public static CharacterGenerationForm characterForm;
         public static CharacterPortfolio characterportfolio;
+        public static AboutBox characteraboutBox;
 
         /// <summary>
         /// The main entry point for the application.
@@ -23,6 +24,7 @@ namespace COMP123_S2019_FinalTestC.Objects
 
             characterForm = new CharacterGenerationForm();
             characterportfolio = new CharacterPortfolio();
+            characteraboutBox = new AboutBox();
             Application.Run(characterForm);
         }
     }

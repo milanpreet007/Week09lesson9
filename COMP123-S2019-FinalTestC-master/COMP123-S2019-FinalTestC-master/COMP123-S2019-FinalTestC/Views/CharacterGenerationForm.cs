@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Text;
@@ -112,7 +113,106 @@ namespace COMP123_S2019_FinalTestC.Views
 
         private void GenerateAbilitiesButton_Click(object sender, EventArgs e)
         {
+            int.Parse(StrengthDataLabel.Text) = RandomNuber(1,15);
+            int.Parse(DexterityDataLabel.Text) = RandomNuber(1, 15);
+            int.Parse(IntellectDataLabel.Text) = RandomNuber(1, 15);
+            int.Parse(EnduranceDataLabel.Text) = RandomNuber(1, 15);
+            int.Parse(EducationDataLabel.Text) = RandomNuber(1, 15);
+        }
+
+        private void FileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
 
         }
+
+        private void OpenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // configure the file dialog
+            StudentOpenFileDialog.FileName = "Student.txt";
+            StudentOpenFileDialog.InitialDirectory = Directory.GetCurrentDirectory();
+            StudentOpenFileDialog.Filter = "Text Files (*.txt)|*.txt| All Files (*.*)|*.*";
+
+            // open the file dialog
+            var result = StudentOpenFileDialog.ShowDialog();
+            if (result != DialogResult.Cancel)
+            {
+                try
+                {
+                    // Open the  streawm for reading
+                    using (StreamReader inputStream = new StreamReader(
+                        File.Open(StudentOpenFileDialog.FileName, FileMode.Open)))
+                    {
+                        // read from the file
+                        Program.student.id = int.Parse(inputStream.ReadLine());
+                        Program.student.StudentID = inputStream.ReadLine();
+                        Program.student.FirstName = inputStream.ReadLine();
+                        Program.student.LastName = inputStream.ReadLine();
+
+                        // cleanup
+                        inputStream.Close();
+                        inputStream.Dispose();
+                    }
+
+                    NextButton_Click(sender, e);
+                }
+                catch (IOException exception)
+                {
+
+                    Debug.WriteLine("ERROR: " + exception.Message);
+
+                    MessageBox.Show("ERROR: " + exception.Message, "ERROR",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                catch (FormatException exception)
+                {
+                    Debug.WriteLine("ERROR: " + exception.Message);
+
+                    MessageBox.Show("ERROR: " + exception.Message + "\n\nPlease select the appropriate file type", "ERROR",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
     }
 }
+
+        private void SaveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // configure the file dialog
+            Charac.FileName = "Character.txt";
+            StudentSaveFileDialog.InitialDirectory = Directory.GetCurrentDirectory();
+            StudentSaveFileDialog.Filter = "Text Files (*.txt)|*.txt| All Files (*.*)|*.*";
+
+            // open the file dialog
+            var result = StudentSaveFileDialog.ShowDialog();
+            if (result != DialogResult.Cancel)
+            {
+                // open the stream for writing
+                using (StreamWriter outputStream = new StreamWriter(
+                    File.Open(StudentSaveFileDialog.FileName, FileMode.Create)))
+                {
+                    // write content - string type - to the file
+                    outputStream.WriteLine(Program.student.id.ToString());
+                    outputStream.WriteLine(Program.student.StudentID);
+                    outputStream.WriteLine(Program.student.FirstName);
+                    outputStream.WriteLine(Program.student.LastName);
+
+                    // cleanup
+                    outputStream.Close();
+                    outputStream.Dispose();
+
+                    // give feedback to the user that the file has been saved
+                    // this is a "modal" form
+                    MessageBox.Show("File Saved...", "Saving File...",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+        }
+
+        private void ExitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void AboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Program.characteraboutBox.Show();
+            this.Hide();
+        }
