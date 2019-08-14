@@ -1,4 +1,5 @@
-﻿using System;
+﻿using COMP123_S2019_FinalTestC.Objects;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -63,6 +64,22 @@ namespace COMP123_S2019_FinalTestC.Views
             Random rands = new Random();
             int indexs = rand.Next(AllLine.Length);
             LastNameDataLabel.Text = AllLine[indexs];
+            Program.characterportfolio.Identity.FirstName = FirstNameDataLabel.Text;
+            Program.characterportfolio.Identity.LastName = LastNameDataLabel.Text;
+        }
+
+        private void CharacterGenerationForm_Load(object sender, EventArgs e)
+        {
+            GenerateNameButton_Click(sender,e);
+        }
+
+        private void GenerateSkillsbutton_Click(object sender, EventArgs e)
+        {
+            string[] SkillsList;
+            SkillsList = File.ReadAllLines("skills.txt");
+            Random rand = new Random();
+            int index = rand.Next(SkillsList.Length);
+            FirstSkilllabel.Text = SkillsList.[index];
         }
     }
 }

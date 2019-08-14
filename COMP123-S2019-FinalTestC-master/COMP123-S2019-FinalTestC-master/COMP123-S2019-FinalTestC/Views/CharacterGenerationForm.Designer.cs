@@ -37,7 +37,7 @@
             this.FirstNameDataLabel = new System.Windows.Forms.Label();
             this.LastNameDataLabel = new System.Windows.Forms.Label();
             this.AbilityPage = new System.Windows.Forms.TabPage();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.AbilitiestableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.StrengthDataLabel = new System.Windows.Forms.Label();
             this.DexterityLabel = new System.Windows.Forms.Label();
             this.StrengthLabel = new System.Windows.Forms.Label();
@@ -55,10 +55,19 @@
             this.CharacterSheetPage = new System.Windows.Forms.TabPage();
             this.NextButton = new System.Windows.Forms.Button();
             this.BackButton = new System.Windows.Forms.Button();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.Skilllabel = new System.Windows.Forms.Label();
+            this.FirstSkilllabel = new System.Windows.Forms.Label();
+            this.SecondSkilllabel = new System.Windows.Forms.Label();
+            this.ThirdSkilllabel = new System.Windows.Forms.Label();
+            this.FourthSkilllabel = new System.Windows.Forms.Label();
+            this.GenerateSkillsbutton = new System.Windows.Forms.Button();
             this.MainTabControl.SuspendLayout();
             this.IdentityPage.SuspendLayout();
             this.IdentityTableLayoutPanel.SuspendLayout();
             this.AbilityPage.SuspendLayout();
+            this.AbilitiestableLayoutPanel.SuspendLayout();
+            this.SkillsPage.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -70,7 +79,7 @@
             this.MainTabControl.Controls.Add(this.CharacterSheetPage);
             this.MainTabControl.Dock = System.Windows.Forms.DockStyle.Top;
             this.MainTabControl.Location = new System.Drawing.Point(0, 0);
-            this.MainTabControl.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MainTabControl.Margin = new System.Windows.Forms.Padding(2);
             this.MainTabControl.Name = "MainTabControl";
             this.MainTabControl.SelectedIndex = 0;
             this.MainTabControl.Size = new System.Drawing.Size(549, 335);
@@ -80,9 +89,9 @@
             // 
             this.IdentityPage.Controls.Add(this.IdentityTableLayoutPanel);
             this.IdentityPage.Location = new System.Drawing.Point(4, 33);
-            this.IdentityPage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.IdentityPage.Margin = new System.Windows.Forms.Padding(2);
             this.IdentityPage.Name = "IdentityPage";
-            this.IdentityPage.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.IdentityPage.Padding = new System.Windows.Forms.Padding(2);
             this.IdentityPage.Size = new System.Drawing.Size(541, 298);
             this.IdentityPage.TabIndex = 0;
             this.IdentityPage.Text = "Identity";
@@ -101,7 +110,7 @@
             this.IdentityTableLayoutPanel.Controls.Add(this.FirstNameDataLabel, 1, 0);
             this.IdentityTableLayoutPanel.Controls.Add(this.LastNameDataLabel, 1, 1);
             this.IdentityTableLayoutPanel.Location = new System.Drawing.Point(5, 5);
-            this.IdentityTableLayoutPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.IdentityTableLayoutPanel.Margin = new System.Windows.Forms.Padding(2);
             this.IdentityTableLayoutPanel.Name = "IdentityTableLayoutPanel";
             this.IdentityTableLayoutPanel.RowCount = 4;
             this.IdentityTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
@@ -131,7 +140,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.IdentityTableLayoutPanel.SetColumnSpan(this.GenerateNameButton, 2);
             this.GenerateNameButton.Location = new System.Drawing.Point(266, 182);
-            this.GenerateNameButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.GenerateNameButton.Margin = new System.Windows.Forms.Padding(2);
             this.GenerateNameButton.Name = "GenerateNameButton";
             this.GenerateNameButton.Size = new System.Drawing.Size(262, 57);
             this.GenerateNameButton.TabIndex = 1;
@@ -184,50 +193,50 @@
             // 
             // AbilityPage
             // 
-            this.AbilityPage.Controls.Add(this.tableLayoutPanel1);
+            this.AbilityPage.Controls.Add(this.AbilitiestableLayoutPanel);
             this.AbilityPage.Location = new System.Drawing.Point(4, 33);
-            this.AbilityPage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.AbilityPage.Margin = new System.Windows.Forms.Padding(2);
             this.AbilityPage.Name = "AbilityPage";
-            this.AbilityPage.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.AbilityPage.Padding = new System.Windows.Forms.Padding(2);
             this.AbilityPage.Size = new System.Drawing.Size(541, 298);
             this.AbilityPage.TabIndex = 1;
             this.AbilityPage.Text = "Abilities";
             this.AbilityPage.UseVisualStyleBackColor = true;
             // 
-            // tableLayoutPanel1
+            // AbilitiestableLayoutPanel
             // 
-            this.tableLayoutPanel1.ColumnCount = 4;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.Controls.Add(this.StrengthDataLabel, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.DexterityLabel, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.StrengthLabel, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.GenerateAbilitiesButton, 2, 7);
-            this.tableLayoutPanel1.Controls.Add(this.EnduranceLabel, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.IntellectLabel, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.EducationLabel, 0, 4);
-            this.tableLayoutPanel1.Controls.Add(this.SocialStandingLabel, 0, 5);
-            this.tableLayoutPanel1.Controls.Add(this.DexterityDataLabel, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.EnduranceDataLabel, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.IntellectDataLabel, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.EducationDataLabel, 1, 4);
-            this.tableLayoutPanel1.Controls.Add(this.SocialStandingDataLabel, 1, 5);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(8, 5);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 8;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(527, 292);
-            this.tableLayoutPanel1.TabIndex = 0;
+            this.AbilitiestableLayoutPanel.ColumnCount = 4;
+            this.AbilitiestableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35F));
+            this.AbilitiestableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.AbilitiestableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.AbilitiestableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.AbilitiestableLayoutPanel.Controls.Add(this.StrengthDataLabel, 1, 0);
+            this.AbilitiestableLayoutPanel.Controls.Add(this.DexterityLabel, 0, 1);
+            this.AbilitiestableLayoutPanel.Controls.Add(this.StrengthLabel, 0, 0);
+            this.AbilitiestableLayoutPanel.Controls.Add(this.GenerateAbilitiesButton, 2, 7);
+            this.AbilitiestableLayoutPanel.Controls.Add(this.EnduranceLabel, 0, 2);
+            this.AbilitiestableLayoutPanel.Controls.Add(this.IntellectLabel, 0, 3);
+            this.AbilitiestableLayoutPanel.Controls.Add(this.EducationLabel, 0, 4);
+            this.AbilitiestableLayoutPanel.Controls.Add(this.SocialStandingLabel, 0, 5);
+            this.AbilitiestableLayoutPanel.Controls.Add(this.DexterityDataLabel, 1, 1);
+            this.AbilitiestableLayoutPanel.Controls.Add(this.EnduranceDataLabel, 1, 2);
+            this.AbilitiestableLayoutPanel.Controls.Add(this.IntellectDataLabel, 1, 3);
+            this.AbilitiestableLayoutPanel.Controls.Add(this.EducationDataLabel, 1, 4);
+            this.AbilitiestableLayoutPanel.Controls.Add(this.SocialStandingDataLabel, 1, 5);
+            this.AbilitiestableLayoutPanel.Location = new System.Drawing.Point(8, 5);
+            this.AbilitiestableLayoutPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.AbilitiestableLayoutPanel.Name = "AbilitiestableLayoutPanel";
+            this.AbilitiestableLayoutPanel.RowCount = 8;
+            this.AbilitiestableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.AbilitiestableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.AbilitiestableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.AbilitiestableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.AbilitiestableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.AbilitiestableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.AbilitiestableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.AbilitiestableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.AbilitiestableLayoutPanel.Size = new System.Drawing.Size(527, 292);
+            this.AbilitiestableLayoutPanel.TabIndex = 0;
             // 
             // StrengthDataLabel
             // 
@@ -274,9 +283,9 @@
             this.GenerateAbilitiesButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel1.SetColumnSpan(this.GenerateAbilitiesButton, 2);
+            this.AbilitiestableLayoutPanel.SetColumnSpan(this.GenerateAbilitiesButton, 2);
             this.GenerateAbilitiesButton.Location = new System.Drawing.Point(291, 254);
-            this.GenerateAbilitiesButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.GenerateAbilitiesButton.Margin = new System.Windows.Forms.Padding(2);
             this.GenerateAbilitiesButton.Name = "GenerateAbilitiesButton";
             this.GenerateAbilitiesButton.Size = new System.Drawing.Size(234, 36);
             this.GenerateAbilitiesButton.TabIndex = 2;
@@ -407,8 +416,10 @@
             // 
             // SkillsPage
             // 
+            this.SkillsPage.Controls.Add(this.GenerateSkillsbutton);
+            this.SkillsPage.Controls.Add(this.tableLayoutPanel1);
             this.SkillsPage.Location = new System.Drawing.Point(4, 33);
-            this.SkillsPage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SkillsPage.Margin = new System.Windows.Forms.Padding(2);
             this.SkillsPage.Name = "SkillsPage";
             this.SkillsPage.Size = new System.Drawing.Size(541, 298);
             this.SkillsPage.TabIndex = 2;
@@ -418,7 +429,7 @@
             // CharacterSheetPage
             // 
             this.CharacterSheetPage.Location = new System.Drawing.Point(4, 33);
-            this.CharacterSheetPage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CharacterSheetPage.Margin = new System.Windows.Forms.Padding(2);
             this.CharacterSheetPage.Name = "CharacterSheetPage";
             this.CharacterSheetPage.Size = new System.Drawing.Size(541, 298);
             this.CharacterSheetPage.TabIndex = 3;
@@ -428,7 +439,7 @@
             // NextButton
             // 
             this.NextButton.Location = new System.Drawing.Point(442, 352);
-            this.NextButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.NextButton.Margin = new System.Windows.Forms.Padding(2);
             this.NextButton.Name = "NextButton";
             this.NextButton.Size = new System.Drawing.Size(96, 47);
             this.NextButton.TabIndex = 1;
@@ -439,13 +450,106 @@
             // BackButton
             // 
             this.BackButton.Location = new System.Drawing.Point(11, 352);
-            this.BackButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BackButton.Margin = new System.Windows.Forms.Padding(2);
             this.BackButton.Name = "BackButton";
             this.BackButton.Size = new System.Drawing.Size(96, 47);
             this.BackButton.TabIndex = 1;
             this.BackButton.Text = "Back";
             this.BackButton.UseVisualStyleBackColor = true;
             this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 4;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.Controls.Add(this.Skilllabel, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.FirstSkilllabel, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.SecondSkilllabel, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.ThirdSkilllabel, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.FourthSkilllabel, 0, 4);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(18, 3);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 5;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(293, 250);
+            this.tableLayoutPanel1.TabIndex = 0;
+            // 
+            // Skilllabel
+            // 
+            this.Skilllabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Skilllabel.Location = new System.Drawing.Point(3, 0);
+            this.Skilllabel.Name = "Skilllabel";
+            this.Skilllabel.Size = new System.Drawing.Size(67, 50);
+            this.Skilllabel.TabIndex = 0;
+            this.Skilllabel.Text = "Skills";
+            this.Skilllabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // FirstSkilllabel
+            // 
+            this.FirstSkilllabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.FirstSkilllabel.BackColor = System.Drawing.Color.LightGray;
+            this.FirstSkilllabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.FirstSkilllabel.Location = new System.Drawing.Point(3, 50);
+            this.FirstSkilllabel.Name = "FirstSkilllabel";
+            this.FirstSkilllabel.Size = new System.Drawing.Size(67, 50);
+            this.FirstSkilllabel.TabIndex = 1;
+            // 
+            // SecondSkilllabel
+            // 
+            this.SecondSkilllabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.SecondSkilllabel.BackColor = System.Drawing.Color.LightGray;
+            this.SecondSkilllabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.SecondSkilllabel.Location = new System.Drawing.Point(3, 100);
+            this.SecondSkilllabel.Name = "SecondSkilllabel";
+            this.SecondSkilllabel.Size = new System.Drawing.Size(67, 50);
+            this.SecondSkilllabel.TabIndex = 2;
+            // 
+            // ThirdSkilllabel
+            // 
+            this.ThirdSkilllabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ThirdSkilllabel.BackColor = System.Drawing.Color.LightGray;
+            this.ThirdSkilllabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ThirdSkilllabel.Location = new System.Drawing.Point(3, 150);
+            this.ThirdSkilllabel.Name = "ThirdSkilllabel";
+            this.ThirdSkilllabel.Size = new System.Drawing.Size(67, 50);
+            this.ThirdSkilllabel.TabIndex = 3;
+            // 
+            // FourthSkilllabel
+            // 
+            this.FourthSkilllabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.FourthSkilllabel.BackColor = System.Drawing.Color.LightGray;
+            this.FourthSkilllabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.FourthSkilllabel.Location = new System.Drawing.Point(3, 200);
+            this.FourthSkilllabel.Name = "FourthSkilllabel";
+            this.FourthSkilllabel.Size = new System.Drawing.Size(67, 50);
+            this.FourthSkilllabel.TabIndex = 4;
+            // 
+            // GenerateSkillsbutton
+            // 
+            this.GenerateSkillsbutton.Location = new System.Drawing.Point(398, 234);
+            this.GenerateSkillsbutton.Name = "GenerateSkillsbutton";
+            this.GenerateSkillsbutton.Size = new System.Drawing.Size(122, 61);
+            this.GenerateSkillsbutton.TabIndex = 1;
+            this.GenerateSkillsbutton.Text = "Generate Skills";
+            this.GenerateSkillsbutton.UseVisualStyleBackColor = true;
+            this.GenerateSkillsbutton.Click += new System.EventHandler(this.GenerateSkillsbutton_Click);
             // 
             // CharacterGenerationForm
             // 
@@ -454,13 +558,16 @@
             this.Controls.Add(this.BackButton);
             this.Controls.Add(this.NextButton);
             this.Controls.Add(this.MainTabControl);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "CharacterGenerationForm";
             this.Text = "Character Generator";
+            this.Load += new System.EventHandler(this.CharacterGenerationForm_Load);
             this.MainTabControl.ResumeLayout(false);
             this.IdentityPage.ResumeLayout(false);
             this.IdentityTableLayoutPanel.ResumeLayout(false);
             this.AbilityPage.ResumeLayout(false);
+            this.AbilitiestableLayoutPanel.ResumeLayout(false);
+            this.SkillsPage.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -481,7 +588,7 @@
         private System.Windows.Forms.Label LastNameLabel;
         private System.Windows.Forms.Label FirstNameDataLabel;
         private System.Windows.Forms.Label LastNameDataLabel;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TableLayoutPanel AbilitiestableLayoutPanel;
         private System.Windows.Forms.Label StrengthDataLabel;
         private System.Windows.Forms.Label DexterityLabel;
         private System.Windows.Forms.Label StrengthLabel;
@@ -495,5 +602,12 @@
         private System.Windows.Forms.Label IntellectDataLabel;
         private System.Windows.Forms.Label EducationDataLabel;
         private System.Windows.Forms.Label SocialStandingDataLabel;
+        private System.Windows.Forms.Button GenerateSkillsbutton;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Label Skilllabel;
+        private System.Windows.Forms.Label FirstSkilllabel;
+        private System.Windows.Forms.Label SecondSkilllabel;
+        private System.Windows.Forms.Label ThirdSkilllabel;
+        private System.Windows.Forms.Label FourthSkilllabel;
     }
 }
