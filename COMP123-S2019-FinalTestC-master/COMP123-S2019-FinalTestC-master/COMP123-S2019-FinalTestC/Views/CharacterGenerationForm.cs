@@ -22,7 +22,8 @@ namespace COMP123_S2019_FinalTestC.Views
         {
             InitializeComponent();
         }
-
+       public static string[] AllLines;
+        public static string[] AllLine;
         /// <summary>
         /// This is the event handler for the BackButton Click event
         /// </summary>
@@ -50,20 +51,7 @@ namespace COMP123_S2019_FinalTestC.Views
         }
 
         private void GenerateNameButton_Click(object sender, EventArgs e)
-        {
-            //Entering the First Name
-            string[] AllLines;
-            AllLines = File.ReadAllLines("firstNames.txt");
-            Random rand = new Random();
-            int index = rand.Next(AllLines.Length);
-            FirstNameDataLabel.Text = AllLines[index];
-
-            //Entering the Last Name
-            string[] AllLine;
-            AllLine = File.ReadAllLines("lastNames.txt");
-            Random rands = new Random();
-            int indexs = rand.Next(AllLine.Length);
-            LastNameDataLabel.Text = AllLine[indexs];
+        {  
             Program.characterportfolio.Identity.FirstName = FirstNameDataLabel.Text;
             Program.characterportfolio.Identity.LastName = LastNameDataLabel.Text;
         }
@@ -81,7 +69,32 @@ namespace COMP123_S2019_FinalTestC.Views
             int index = rand.Next(SkillsList.Length);
             FirstSkilllabel.Text = SkillsList.[index];
         }
+        public static void LoadNames()
+        {
+            //Entering the First Name
+            
+            AllLines = File.ReadAllLines("firstNames.txt");
+            //Entering the Last Name
+            
+            AllLine = File.ReadAllLines("lastNames.txt");
 
+        }
+        public static void GenerateNames()
+        {
+            Random rand = new Random();
+            int index = rand.Next(AllLines.Length);
+            FirstNameDataLabel.Text = AllLines[index];
+            Random rands = new Random();
+            int indexs = rand.Next(AllLine.Length);
+            LastNameDataLabel.Text = AllLine[indexs];
+        }
+        
+            public int RandomNuber(int min,int max)
+            {
+            Random random = new Random();
+            return random.Next(1, 15);
+            }
+        
         private void MainTabControl_SelectedIndexChanged(object sender, EventArgs e)
         {
 
@@ -93,6 +106,11 @@ namespace COMP123_S2019_FinalTestC.Views
         }
 
         private void FirstNameLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void GenerateAbilitiesButton_Click(object sender, EventArgs e)
         {
 
         }
