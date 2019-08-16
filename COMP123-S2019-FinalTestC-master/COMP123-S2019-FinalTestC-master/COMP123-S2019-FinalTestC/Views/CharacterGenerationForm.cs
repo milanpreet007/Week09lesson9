@@ -50,7 +50,7 @@ namespace COMP123_S2019_FinalTestC.Views
                 MainTabControl.SelectedIndex++;
             }
         }
-
+       // This is the event handler for the Generatnamesbutton Click event
         private void GenerateNameButton_Click(object sender, EventArgs e)
         {
             // Inputing Last Name
@@ -75,7 +75,7 @@ namespace COMP123_S2019_FinalTestC.Views
         {
             GenerateNameButton_Click(sender,e);
         }
-
+        //This is the event handler for the Generateskillsbutton Click event
         private void GenerateSkillsbutton_Click(object sender, EventArgs e)
         {
             string[] SkillsList;
@@ -106,7 +106,7 @@ namespace COMP123_S2019_FinalTestC.Views
         {
 
         }
-
+        // This is the event handler for the Generateabilities Click event
         private void GenerateAbilitiesButton_Click(object sender, EventArgs e)
         {
             int.Parse(StrengthDataLabel.Text) = RandomNuber(1,15);
@@ -120,7 +120,7 @@ namespace COMP123_S2019_FinalTestC.Views
         {
 
         }
-
+        //This is the event handler for the openinig file from strip menu Click event
         private void OpenToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // configure the file dialog
@@ -168,11 +168,11 @@ namespace COMP123_S2019_FinalTestC.Views
                 }
     }
 }
-
+        //This is the event handler for the Savestriptoolmenu Click event
         private void SaveToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // configure the file dialog
-            Charac.FileName = "Character.txt";
+            CharacterSaveFileDialog.FileName = "Character.txt";
             StudentSaveFileDialog.InitialDirectory = Directory.GetCurrentDirectory();
             StudentSaveFileDialog.Filter = "Text Files (*.txt)|*.txt| All Files (*.*)|*.*";
 

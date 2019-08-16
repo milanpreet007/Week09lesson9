@@ -31,13 +31,6 @@
             this.components = new System.ComponentModel.Container();
             this.hardwareListlabel = new System.Windows.Forms.Label();
             this.HardwareListdataGridView = new System.Windows.Forms.DataGridView();
-            this.yourSelectionlabel = new System.Windows.Forms.Label();
-            this.selectedItemViewtextBox = new System.Windows.Forms.TextBox();
-            this.cancelbutton = new System.Windows.Forms.Button();
-            this.nextbutton = new System.Windows.Forms.Button();
-            this.updateOrderOptionBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.productsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.programBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.productIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.costDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.manufacturerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -69,9 +62,16 @@
             this.mousttypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.powerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.webcamDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.yourSelectionlabel = new System.Windows.Forms.Label();
+            this.selectedItemViewtextBox = new System.Windows.Forms.TextBox();
+            this.cancelbutton = new System.Windows.Forms.Button();
+            this.nextbutton = new System.Windows.Forms.Button();
+            this.updateOrderOptionBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.programBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.HardwareListdataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.updateOrderOptionBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.updateOrderOptionBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.programBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -128,65 +128,13 @@
             this.powerDataGridViewTextBoxColumn,
             this.webcamDataGridViewTextBoxColumn});
             this.HardwareListdataGridView.DataSource = this.productsBindingSource;
-            this.HardwareListdataGridView.Location = new System.Drawing.Point(23, 65);
+            this.HardwareListdataGridView.Location = new System.Drawing.Point(8, 59);
             this.HardwareListdataGridView.Name = "HardwareListdataGridView";
             this.HardwareListdataGridView.ReadOnly = true;
             this.HardwareListdataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.HardwareListdataGridView.Size = new System.Drawing.Size(749, 278);
             this.HardwareListdataGridView.TabIndex = 1;
-            this.HardwareListdataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.HardwareListdataGridView_CellContentClick);
-            // 
-            // yourSelectionlabel
-            // 
-            this.yourSelectionlabel.AutoSize = true;
-            this.yourSelectionlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.yourSelectionlabel.Location = new System.Drawing.Point(12, 360);
-            this.yourSelectionlabel.Name = "yourSelectionlabel";
-            this.yourSelectionlabel.Size = new System.Drawing.Size(153, 25);
-            this.yourSelectionlabel.TabIndex = 2;
-            this.yourSelectionlabel.Text = "Your Selection";
-            // 
-            // selectedItemViewtextBox
-            // 
-            this.selectedItemViewtextBox.Location = new System.Drawing.Point(187, 360);
-            this.selectedItemViewtextBox.Name = "selectedItemViewtextBox";
-            this.selectedItemViewtextBox.Size = new System.Drawing.Size(340, 20);
-            this.selectedItemViewtextBox.TabIndex = 3;
-            // 
-            // cancelbutton
-            // 
-            this.cancelbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cancelbutton.Location = new System.Drawing.Point(533, 508);
-            this.cancelbutton.Name = "cancelbutton";
-            this.cancelbutton.Size = new System.Drawing.Size(96, 41);
-            this.cancelbutton.TabIndex = 4;
-            this.cancelbutton.Text = "Cancel";
-            this.cancelbutton.UseVisualStyleBackColor = true;
-            this.cancelbutton.Click += new System.EventHandler(this.Cancelbutton_Click);
-            // 
-            // nextbutton
-            // 
-            this.nextbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nextbutton.Location = new System.Drawing.Point(661, 508);
-            this.nextbutton.Name = "nextbutton";
-            this.nextbutton.Size = new System.Drawing.Size(96, 41);
-            this.nextbutton.TabIndex = 5;
-            this.nextbutton.Text = "Next";
-            this.nextbutton.UseVisualStyleBackColor = true;
-            this.nextbutton.Click += new System.EventHandler(this.Nextbutton_Click);
-            // 
-            // updateOrderOptionBindingSource
-            // 
-            this.updateOrderOptionBindingSource.DataSource = typeof(Assignment_5.DollarComputersDataSetTableAdapters.TableAdapterManager.UpdateOrderOption);
-            // 
-            // productsBindingSource
-            // 
-            this.productsBindingSource.DataMember = "products";
-            this.productsBindingSource.DataSource = typeof(Assignment_5.DollarComputersDataSet);
-            // 
-            // programBindingSource
-            // 
-            this.programBindingSource.DataSource = typeof(Assignment_5.Program);
+            this.HardwareListdataGridView.SelectionChanged += new System.EventHandler(this.HardwareListdataGridView_SelectionChanged);
             // 
             // productIDDataGridViewTextBoxColumn
             // 
@@ -466,6 +414,58 @@
             this.webcamDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.webcamDataGridViewTextBoxColumn.Width = 53;
             // 
+            // productsBindingSource
+            // 
+            this.productsBindingSource.DataMember = "products";
+            this.productsBindingSource.DataSource = typeof(Assignment_5.DollarComputersDataSet);
+            // 
+            // yourSelectionlabel
+            // 
+            this.yourSelectionlabel.AutoSize = true;
+            this.yourSelectionlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.yourSelectionlabel.Location = new System.Drawing.Point(12, 360);
+            this.yourSelectionlabel.Name = "yourSelectionlabel";
+            this.yourSelectionlabel.Size = new System.Drawing.Size(153, 25);
+            this.yourSelectionlabel.TabIndex = 2;
+            this.yourSelectionlabel.Text = "Your Selection";
+            // 
+            // selectedItemViewtextBox
+            // 
+            this.selectedItemViewtextBox.Location = new System.Drawing.Point(187, 360);
+            this.selectedItemViewtextBox.Name = "selectedItemViewtextBox";
+            this.selectedItemViewtextBox.Size = new System.Drawing.Size(340, 20);
+            this.selectedItemViewtextBox.TabIndex = 3;
+            // 
+            // cancelbutton
+            // 
+            this.cancelbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cancelbutton.Location = new System.Drawing.Point(533, 508);
+            this.cancelbutton.Name = "cancelbutton";
+            this.cancelbutton.Size = new System.Drawing.Size(96, 41);
+            this.cancelbutton.TabIndex = 4;
+            this.cancelbutton.Text = "Cancel";
+            this.cancelbutton.UseVisualStyleBackColor = true;
+            this.cancelbutton.Click += new System.EventHandler(this.Cancelbutton_Click);
+            // 
+            // nextbutton
+            // 
+            this.nextbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nextbutton.Location = new System.Drawing.Point(661, 508);
+            this.nextbutton.Name = "nextbutton";
+            this.nextbutton.Size = new System.Drawing.Size(96, 41);
+            this.nextbutton.TabIndex = 5;
+            this.nextbutton.Text = "Next";
+            this.nextbutton.UseVisualStyleBackColor = true;
+            this.nextbutton.Click += new System.EventHandler(this.Nextbutton_Click);
+            // 
+            // updateOrderOptionBindingSource
+            // 
+            this.updateOrderOptionBindingSource.DataSource = typeof(Assignment_5.DollarComputersDataSetTableAdapters.TableAdapterManager.UpdateOrderOption);
+            // 
+            // programBindingSource
+            // 
+            this.programBindingSource.DataSource = typeof(Assignment_5.Program);
+            // 
             // SelectForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -485,8 +485,8 @@
             this.Text = "Select Form";
             this.Load += new System.EventHandler(this.SelectForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.HardwareListdataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.updateOrderOptionBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.updateOrderOptionBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.programBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

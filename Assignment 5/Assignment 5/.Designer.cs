@@ -31,6 +31,7 @@
             this.Startneworderbutton = new System.Windows.Forms.Button();
             this.openASavedOrderbutton = new System.Windows.Forms.Button();
             this.exitButton = new System.Windows.Forms.Button();
+            this.OpenFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.SuspendLayout();
             // 
             // Startneworderbutton
@@ -53,6 +54,7 @@
             this.openASavedOrderbutton.TabIndex = 1;
             this.openASavedOrderbutton.Text = "Open a saved order";
             this.openASavedOrderbutton.UseVisualStyleBackColor = true;
+            this.openASavedOrderbutton.Click += new System.EventHandler(this.OpenASavedOrderbutton_Click);
             // 
             // exitButton
             // 
@@ -64,6 +66,10 @@
             this.exitButton.Text = "Exit";
             this.exitButton.UseVisualStyleBackColor = true;
             this.exitButton.Click += new System.EventHandler(this.ExitButton_Click);
+            // 
+            // OpenFileDialog
+            // 
+            this.OpenFileDialog.FileName = "openFileDialog1";
             // 
             // StartForm
             // 
@@ -89,6 +95,7 @@
         private System.Windows.Forms.Button Startneworderbutton;
         private System.Windows.Forms.Button openASavedOrderbutton;
         private System.Windows.Forms.Button exitButton;
+        private System.Windows.Forms.OpenFileDialog OpenFileDialog;
     }
 }
 

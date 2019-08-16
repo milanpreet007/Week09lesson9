@@ -14,7 +14,7 @@ namespace Assignment_5
         public static ProductInfoForm productInfoForm;
         public static OrderForm orderForm;
         public static AboutForm aboutform;
-        public static Product product;
+        public static Product products;
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -30,7 +30,7 @@ namespace Assignment_5
             productInfoForm = new ProductInfoForm();
             orderForm = new OrderForm();
             aboutform = new AboutForm();
-            product = new Product();
+            products = new Product();
             Application.Run(splashScreenForm);
 
         }
