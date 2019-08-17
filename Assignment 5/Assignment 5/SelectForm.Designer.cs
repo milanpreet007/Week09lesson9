@@ -433,6 +433,7 @@
             // 
             this.selectedItemViewtextBox.Location = new System.Drawing.Point(187, 360);
             this.selectedItemViewtextBox.Name = "selectedItemViewtextBox";
+            this.selectedItemViewtextBox.ReadOnly = true;
             this.selectedItemViewtextBox.Size = new System.Drawing.Size(340, 20);
             this.selectedItemViewtextBox.TabIndex = 3;
             // 

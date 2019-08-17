@@ -16,7 +16,7 @@ namespace Assignment_5
         {
             InitializeComponent();
         }/// <summary>
-        /// this is the vent handler for the form load event
+        /// this is the event handler for the form load event
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>

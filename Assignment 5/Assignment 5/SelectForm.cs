@@ -102,7 +102,10 @@ namespace Assignment_5
         {
             selectedItemViewtextBox.Text = ComputerListDataGridViewSelectedItem();
         }
-
+        /// <summary>
+        /// this is the method to show  the cost manufacturer and model of the hardware chosen
+        /// </summary>
+        /// <returns></returns>
         private string ComputerListDataGridViewSelectedItem()
         {
             var rowIndex = HardwareListdataGridView.CurrentCell.RowIndex;

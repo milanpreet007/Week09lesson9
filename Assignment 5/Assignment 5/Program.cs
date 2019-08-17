@@ -31,6 +31,7 @@ namespace Assignment_5
             orderForm = new OrderForm();
             aboutform = new AboutForm();
             products = new Product();
+
             Application.Run(splashScreenForm);
 
         }

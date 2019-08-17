@@ -37,7 +37,36 @@ namespace Assignment_5
 
         private void OpenToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            productIDlabel.Text = Program.products.productID.ToString();
+            // confgure the dile dialog
+            openFileDialog.FileName = "Product.txt";
+            openFileDialog.InitialDirectory = Directory.GetCurrentDirectory();
+            openFileDialog.Filter = "Text Files (*.txt)|*.txt| All Files (*.*)|*.*";
+            //open the file diolog
+            var result = openFileDialog.ShowDialog();
+            //open file stream to read
+            using (StreamReader inputStream = new StreamReader(File.Open(openFileDialog.FileName, FileMode.Open)))
+            {
+                // read stuff from the file
+                Program.products.productID = short.Parse(inputStream.ReadLine());
+                Program.products.cost = decimal.Parse(inputStream.ReadLine());
+                Program.products.manufacturer = inputStream.ReadLine();
+                Program.products.model = inputStream.ReadLine();
+                Program.products.RAM_size = inputStream.ReadLine();
+                Program.products.screensize = inputStream.ReadLine();
+                Program.products.CPU_brand = inputStream.ReadLine();
+                Program.products.CPU_type = inputStream.ReadLine();
+                Program.products.CPU_speed = inputStream.ReadLine();
+                Program.products.CPU_number = inputStream.ReadLine();
+                Program.products.condition = inputStream.ReadLine();
+                Program.products.OS = inputStream.ReadLine();
+                Program.products.platform = inputStream.ReadLine();
+                Program.products.HDD_size = inputStream.ReadLine();
+                Program.products.GPU_Type = inputStream.ReadLine();
+                Program.products.webcam = inputStream.ReadLine();
+                //cleanup
+                inputStream.Close();
+                inputStream.Dispose();
+            }
         }
 
         private void SaveToolStripMenuItem_Click(object sender, EventArgs e)

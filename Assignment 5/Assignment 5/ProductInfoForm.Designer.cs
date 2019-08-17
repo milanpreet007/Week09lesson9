@@ -81,6 +81,7 @@
             this.SelectAnotherProductbutton = new System.Windows.Forms.Button();
             this.nextbutton = new System.Windows.Forms.Button();
             this.Cancelbutton = new System.Windows.Forms.Button();
+            this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.mainMenuStrip.SuspendLayout();
             this.productInfogroupBox.SuspendLayout();
             this.techSpecsgroupBox.SuspendLayout();
@@ -580,6 +581,10 @@
             this.Cancelbutton.UseVisualStyleBackColor = true;
             this.Cancelbutton.Click += new System.EventHandler(this.Cancelbutton_Click);
             // 
+            // openFileDialog
+            // 
+            this.openFileDialog.FileName = "openFileDialog1";
+            // 
             // ProductInfoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -600,6 +605,7 @@
             this.Controls.Add(this.mainMenuStrip);
             this.MainMenuStrip = this.mainMenuStrip;
             this.Name = "ProductInfoForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ProductInfoForm";
             this.Activated += new System.EventHandler(this.ProductInfoForm_Activated);
             this.mainMenuStrip.ResumeLayout(false);
@@ -667,5 +673,6 @@
         private System.Windows.Forms.Button SelectAnotherProductbutton;
         private System.Windows.Forms.Button nextbutton;
         private System.Windows.Forms.Button Cancelbutton;
+        private System.Windows.Forms.OpenFileDialog openFileDialog;
     }
 }

@@ -13,10 +13,15 @@ namespace Assignment_5
 {
     public partial class OrderForm : Form
     {
+
         public OrderForm()
         {
             InitializeComponent();
         }
+        // fields for cost calculation of hardware
+        public double Tax;
+        public double TotalCost;
+        public double Cost;
 
         private void OrderForm_Load(object sender, EventArgs e)
         {
@@ -46,6 +51,11 @@ namespace Assignment_5
                 //cleanup
                 inputStream.Close();
                 inputStream.Dispose();
+                //This is the calculation for the total price
+                Tax = Math.Round((double)Program.products.cost, 2);
+                Tax = Math.Round(Tax * 0.13, 2);
+                Cost = Math.Round((double)Program.products.cost, 2);
+                TotalCost = Math.Round(Tax + Cost, 2);
 
                 conditiontextBox.Text = Program.products.productID.ToString();
                 platformtextBox.Text = String.Format("{0:C}", Program.products.cost);
@@ -62,9 +72,11 @@ namespace Assignment_5
                 HDDtextBox.Text = Program.products.HDD_size;
                 GPUTypetextBox.Text = Program.products.GPU_Type;
                 WebCamtextBox.Text = Program.products.webcam;
-
+                pricetextBox.Text = $"{ Cost}";
+                salestaxtextBox.Text = $"{Tax}";
+                TotaltextBox.Text = $"{TotalCost}";
             }
-    }
+        }
 
         private void Backbutton_Click(object sender, EventArgs e)
         {
@@ -76,20 +88,10 @@ namespace Assignment_5
         {
             Application.Exit();
         }
-
-        private void Memorylabel_Click(object sender, EventArgs e)
+        private void Finishbutton_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void CPUTypelabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void TextBox1_TextChanged(object sender, EventArgs e)
-        {
-
+            MessageBox.Show("Thankyou for you business \nyour order will be delivered in 7-10 business days");
         }
     }
-}
+    }
+

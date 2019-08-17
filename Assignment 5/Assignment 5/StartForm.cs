@@ -46,7 +46,11 @@ namespace Assignment_5
         {
             Application.Exit();
         }
-
+        /// <summary>
+        /// this is the event handler for opening a sved file
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void OpenASavedOrderbutton_Click(object sender, EventArgs e)
         {
            // confgure the dile dialog

@@ -62,7 +62,7 @@
             this.yourpricegroupBox = new System.Windows.Forms.GroupBox();
             this.TotaltextBox = new System.Windows.Forms.TextBox();
             this.Totallabel = new System.Windows.Forms.Label();
-            this.salestextBox = new System.Windows.Forms.TextBox();
+            this.salestaxtextBox = new System.Windows.Forms.TextBox();
             this.pricetextBox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.pricelabel = new System.Windows.Forms.Label();
@@ -118,7 +118,7 @@
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(96, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
             // 
             // printToolStripMenuItem
             // 
@@ -131,12 +131,12 @@
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(96, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(177, 6);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(99, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.exitToolStripMenuItem.Text = "E&xit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItem_Click);
             // 
@@ -152,7 +152,7 @@
             // 
             this.backToolStripMenuItem.Name = "backToolStripMenuItem";
             this.backToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
-            this.backToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
+            this.backToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.backToolStripMenuItem.Text = "&Back";
             // 
             // helpToolStripMenuItem
@@ -167,12 +167,12 @@
             // toolStripSeparator5
             // 
             this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(113, 6);
+            this.toolStripSeparator5.Size = new System.Drawing.Size(177, 6);
             // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.aboutToolStripMenuItem.Text = "&About...";
             // 
             // systemComponentsgroupBox
@@ -300,7 +300,7 @@
             this.CPUTypetextBox.ReadOnly = true;
             this.CPUTypetextBox.Size = new System.Drawing.Size(254, 20);
             this.CPUTypetextBox.TabIndex = 7;
-            this.CPUTypetextBox.TextChanged += new System.EventHandler(this.TextBox1_TextChanged);
+ 
             // 
             // CPUBrandtextBox
             // 
@@ -335,7 +335,7 @@
             this.CPUTypelabel.Size = new System.Drawing.Size(96, 24);
             this.CPUTypelabel.TabIndex = 3;
             this.CPUTypelabel.Text = "CPU Type";
-            this.CPUTypelabel.Click += new System.EventHandler(this.CPUTypelabel_Click);
+
             // 
             // Memorylabel
             // 
@@ -346,7 +346,7 @@
             this.Memorylabel.Size = new System.Drawing.Size(79, 24);
             this.Memorylabel.TabIndex = 2;
             this.Memorylabel.Text = "Memory";
-            this.Memorylabel.Click += new System.EventHandler(this.Memorylabel_Click);
+      
             // 
             // CPUBrandlabel
             // 
@@ -372,7 +372,7 @@
             // 
             this.yourpricegroupBox.Controls.Add(this.TotaltextBox);
             this.yourpricegroupBox.Controls.Add(this.Totallabel);
-            this.yourpricegroupBox.Controls.Add(this.salestextBox);
+            this.yourpricegroupBox.Controls.Add(this.salestaxtextBox);
             this.yourpricegroupBox.Controls.Add(this.pricetextBox);
             this.yourpricegroupBox.Controls.Add(this.label6);
             this.yourpricegroupBox.Controls.Add(this.pricelabel);
@@ -401,12 +401,12 @@
             this.Totallabel.TabIndex = 6;
             this.Totallabel.Text = "Total";
             // 
-            // salestextBox
+            // salestaxtextBox
             // 
-            this.salestextBox.Location = new System.Drawing.Point(103, 69);
-            this.salestextBox.Name = "salestextBox";
-            this.salestextBox.Size = new System.Drawing.Size(100, 20);
-            this.salestextBox.TabIndex = 5;
+            this.salestaxtextBox.Location = new System.Drawing.Point(103, 69);
+            this.salestaxtextBox.Name = "salestaxtextBox";
+            this.salestaxtextBox.Size = new System.Drawing.Size(100, 20);
+            this.salestaxtextBox.TabIndex = 5;
             // 
             // pricetextBox
             // 
@@ -414,6 +414,7 @@
             this.pricetextBox.Name = "pricetextBox";
             this.pricetextBox.Size = new System.Drawing.Size(103, 20);
             this.pricetextBox.TabIndex = 4;
+
             // 
             // label6
             // 
@@ -474,6 +475,7 @@
             this.finishbutton.TabIndex = 14;
             this.finishbutton.Text = "Finish";
             this.finishbutton.UseVisualStyleBackColor = true;
+            this.finishbutton.Click += new System.EventHandler(this.Finishbutton_Click);
             // 
             // Backbutton
             // 
@@ -676,7 +678,7 @@
         private System.Windows.Forms.GroupBox yourpricegroupBox;
         private System.Windows.Forms.TextBox TotaltextBox;
         private System.Windows.Forms.Label Totallabel;
-        private System.Windows.Forms.TextBox salestextBox;
+        private System.Windows.Forms.TextBox salestaxtextBox;
         private System.Windows.Forms.TextBox pricetextBox;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label pricelabel;
